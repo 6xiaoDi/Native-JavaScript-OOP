@@ -12,17 +12,24 @@
         this.hobby = this;
     }
 
-    Person.prototype = {
-        constructor:Person,
-        hobby:function(){
-            console.log(1);
-            console.log(this);
-            console.log(this.hobby);
-        }
+    // Person.prototype = {
+    //     constructor:Person,
+    //     hobby:function(){
+    //         console.log(1);
+    //         console.log(this);
+    //         console.log(this.hobby);
+    //     }
+    // }
+
+    Person.prototype.hobby = function() {
+        console.log(1);
+        console.log(this);
+        console.log(this.hobby);
     }
 
     let zhangsan  = new Person("张三","喜欢篮球");
     console.log(zhangsan.hobby);
+    zhangsan.hobby();
     Object.getPrototypeOf(zhangsan).hobby();
 </script>
 </html>
