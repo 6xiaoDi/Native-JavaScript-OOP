@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 工厂模式；
+    // function nvwa(name,hobby){
+    //     let obj = {};  //加原料；
+    //     obj.name = name; //加工原料
+    //     obj.hobby = function(){
+    //         console.log(hobby)
+    //     }
+    //     return obj;  //出厂；
+    // }
+
+    function nvwa(name,hobby){
+        //t obj = {};  //加原料；
+        // {}---this（自动创建的对象是跟this绑定在一起）
+        this.name = name; //加工原料
+        this.hobby = function(){
+            console.log(hobby)
+        }
+        // 隐式返回this，无需自己return obj了
+    }
+    // 自动创建一个对象
+    let zhangsan  = new nvwa();
+    console.log(zhangsan);
+</script>
+</html>
