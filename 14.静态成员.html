@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    function Nvwa(name,hobby){
+        this.name = name;
+        this.hobby = hobby;
+        this.num = 0;
+    }
+    Nvwa.prototype.hobby = function(){
+        console.log(this.hobby);
+    }
+
+    let zhangsan  = new Nvwa("张三","喜欢篮球");
+    zhangsan.num++
+    let lisi  = new Nvwa("李四","喜欢足球");
+    lisi.num++;
+    console.log(zhangsan.num);
+    console.log(lisi.num);
+</script>
+</html>
