@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 代码复用性；
+    // 工厂模式；
+    function nvwa(name,hobby){
+        let obj = {};  //加原料；
+        obj.name = name; //加工原料
+        obj.hobby = function(){
+            console.log(hobby)
+        }
+        return obj;  //出厂；
+    }
+    let zhangsan = nvwa("张三","喜欢篮球");
+    let lisi = nvwa("李四","喜欢足球");
+</script>
+</html>
