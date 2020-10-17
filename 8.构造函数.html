@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 类和对象；
+    function Person(name,hobby){
+        this.name = name;
+        this.hobby = function(){
+            console.log(hobby)
+        }
+    }
+
+    let zhangsan  = new Person("张三","喜欢篮球");
+    let lisi  = new Person("李四","喜欢足球");
+
+    zhangsan.hobby();
+    lisi.hobby();
+    // zhangsan.hobby  === lisi.hobby  ???
+    console.log(zhangsan.hobby  === lisi.hobby);
+</script>
+</html>
