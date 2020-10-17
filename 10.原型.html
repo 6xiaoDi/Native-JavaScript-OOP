@@ -13,11 +13,14 @@
     }
 
     Person.prototype.hobby = function(){
-        console.log("喜欢篮球")
+        // console.log("喜欢篮球")
+        console.log(this);
     }
 
     let zhangsan  = new Person("张三","喜欢篮球");
     let lisi  = new Person("李四","喜欢足球");
-    console.log(zhangsan.hobby===lisi.hobby);
+    // console.log(zhangsan.hobby===lisi.hobby);
+    zhangsan.hobby();
+    lisi.hobby();
 </script>
 </html>
