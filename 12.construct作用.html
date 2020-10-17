@@ -7,17 +7,20 @@
 <body>
 </body>
 <script>
-    function Person(name,hobby){
-        this.name = name;
-        this.hobby = hobby;
-    }
+    // function Person(name,hobby){
+    //     this.name = name;
+    //     this.hobby = hobby;
+    // }
 
-    Person.prototype.hobby = function(){
-        console.log(this.hobby);
-    }
+    // Person.prototype.hobby = function(){
+    //     console.log(this.hobby);
+    // }
 
-    let zhangsan  = new Person("张三","喜欢篮球");
-    let lisi  = new Person("李四","喜欢足球");
-    console.log(zhangsan.constructor===Person);
+    // let zhangsan  = new Person("张三","喜欢篮球");
+    // let lisi  = new Person("李四","喜欢足球");
+    // console.log(zhangsan.constructor===Person);
+    // let str = "fsadfdsa";
+    let str = new String("fdsadsa"); // 构造函数创建
+    console.log(str.constructor===String);  //判断类型；
 </script>
 </html>
