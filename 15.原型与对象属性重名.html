@@ -9,7 +9,7 @@
 <script>
     function Person(name,hobby){
         this.name = name;
-        this.hobby = hobby;
+        this.hobby = this;
     }
 
     Person.prototype = {
@@ -23,5 +23,6 @@
 
     let zhangsan  = new Person("张三","喜欢篮球");
     console.log(zhangsan.hobby);
+    Object.getPrototypeOf(zhangsan).hobby();
 </script>
 </html>
