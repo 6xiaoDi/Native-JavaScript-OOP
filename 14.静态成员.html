@@ -16,11 +16,18 @@
         console.log(this.hobby);
     }
 
+    // 统计实例化的次数；
+    // 静态属性和方法属于构造函数Nvwa；
+    Nvwa.num = 0;
+
     let zhangsan  = new Nvwa("张三","喜欢篮球");
-    zhangsan.num++
+    Nvwa.num++;
+    // zhangsan.num++
     let lisi  = new Nvwa("李四","喜欢足球");
-    lisi.num++;
+    Nvwa.num++;
+    // lisi.num++;
     console.log(zhangsan.num);
     console.log(lisi.num);
+    console.log(Nvwa.num);
 </script>
 </html>
