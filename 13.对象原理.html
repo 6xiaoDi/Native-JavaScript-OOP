@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    function Person(name,hobby){
+        this.name = name;
+        this.hobby = hobby;
+    }
+
+    Person.prototype = {
+        constructor:Person,
+        hobby:function(){
+            console.log(this.hobby);
+        }
+    }
+
+    let zhangsan  = new Person("张三","喜欢篮球");
+    console.log(zhangsan);
+    console.log(zhangsan.__proto__===Person.prototype);
+</script>
+</html>
