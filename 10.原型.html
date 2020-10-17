@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 原型：公共空间；  prototype：对象；
+    function Person(name,hobby){
+        this.name = name;
+    }
+
+    Person.prototype.hobby = function(){
+        console.log("喜欢篮球")
+    }
+
+    let zhangsan  = new Person("张三","喜欢篮球");
+    let lisi  = new Person("李四","喜欢足球");
+    console.log(zhangsan.hobby===lisi.hobby);
+</script>
+</html>
