@@ -17,6 +17,7 @@
     //     return obj;  //出厂；
     // }
 
+    let temp;
     function nvwa(name,hobby){
         //t obj = {};  //加原料；
         // {}---this（自动创建的对象是跟this绑定在一起）
@@ -24,6 +25,7 @@
         this.hobby = function(){
             console.log(hobby)
         }
+        temp = this;
         // return {
         //     name:"张三"
         // }
@@ -31,6 +33,9 @@
     // 自动创建一个对象
     // let zhangsan  = new nvwa();
     let zhangsan  = new nvwa("张三","喜欢篮球");
-    console.log(zhangsan);
+    let lisi  = new nvwa("李四","喜欢篮球");
+    // console.log(zhangsan);
+    console.log(zhangsan===temp);
+    console.log(lisi===temp);
 </script>
 </html>
