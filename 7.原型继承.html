@@ -20,6 +20,8 @@
         Dad.call(this,name);
         this.height = "178cm";
     }
+    Son.prototype = Dad.prototype;
+    Son.prototype.constructor = Son;
 
     let newSon = new Son("张三");
     newSon.fn();
