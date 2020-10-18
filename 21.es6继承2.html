@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    class Dad{
+        constructor(name){
+            this.name = name;
+        }
+        hobby(){
+            console.log("喜欢高尔夫");
+        }
+    }
+
+    class Son extends Dad{
+        constructor(name){
+            super(name);
+            this.height = "178cm";
+        }
+        fn(){
+            console.log("fn...");
+        }
+        hobby(){
+            console.log("喜欢足球");
+        }
+    }
+
+    let zhangsan = new Son();
+    zhangsan.hobby();
+
+</script>
+</html>
