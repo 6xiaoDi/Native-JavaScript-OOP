@@ -11,7 +11,8 @@
         // this.name = "张三";
     }
 
-    Person.prototype.name = "李四";
+    // Person.prototype.name = "李四";
+    Person.prototype.__proto__.name = "王五"
     let zhangsang = new Person();
     console.log(zhangsang.name);
 </script>
