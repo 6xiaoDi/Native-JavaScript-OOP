@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    function fn(name){
+        console.log(this,"名字是"+name);
+    }
+
+    let obj = {
+        myname:"张三",
+        age:20
+    }
+
+    fn.call(obj,"大海");     // 传参是传字符串
+    fn.apply(obj,['大海']);  // 这里第二个传参，需要放在数组里，如果传多个参，也是依次放人数组中
+    fn.bind(obj)('大海');
+</script>
+</html>
