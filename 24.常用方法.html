@@ -16,8 +16,14 @@
     let str = "111";
     console.log(str.constructor===String);
 
+    let arr1 = [];
+    console.log(arr1 instanceof Array);
+    console.log(arr1 instanceof Object);
+
     let arr = [];
-    console.log(arr instanceof Array);
-    console.log(arr instanceof Object);
+    let obj = {};
+    // typeof :不能精确判断类型；
+    console.log(typeof arr)
+    console.log(typeof obj)
 </script>
 </html>
