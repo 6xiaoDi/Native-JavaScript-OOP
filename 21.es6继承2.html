@@ -17,14 +17,15 @@
     }
 
     class Son extends Dad{
-        constructor(name){
-            super(name);
-            this.height = "178cm";
-        }
+        // constructor(name){
+        //     super(name);
+        //     this.height = "178cm";
+        // }
         fn(){
             console.log("fn...");
         }
         hobby(){
+            super.hobby();   // 与父类函数合并了，而不是重写了
             console.log("喜欢足球");
         }
     }
