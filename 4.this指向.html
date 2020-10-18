@@ -10,6 +10,12 @@
     function fn(){
         console.log(this);
     }
-    fn();
+
+    let obj = {
+        myname:"张三",
+        age:20
+    }
+    fn.call(obj);
+    fn.apply(obj);
 </script>
 </html>
