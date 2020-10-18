@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 私有成员；1.只能被class内部方法调用，不能被外部调用；
+    // 子类不能继承私有属性；
+    class Person{
+        #height;
+        constructor(){
+            this.#height = "178cm";
+        }
+    }
+    let zhangsan = new Person();
+    console.log(zhangsan.#height);
+</script>
+</html>
