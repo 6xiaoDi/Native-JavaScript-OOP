@@ -25,5 +25,10 @@
     // typeof :不能精确判断类型；
     console.log(typeof arr)
     console.log(typeof obj)
+
+    let res =  Object.prototype.toString.call(arr);
+    console.log(res);
+    let res1 =  Object.prototype.toString.call(obj);
+    console.log(res1);
 </script>
 </html>
