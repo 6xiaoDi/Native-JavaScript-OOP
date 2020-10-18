@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let dadProto = {
+        fn(){
+            console.log("父类的fn...方法");
+        }
+    }
+    let sonProto = dadProto;
+    sonProto.fn = function(){
+        console.log("子类的fn...方法");
+    }
+
+    dadProto.fn();
+</script>
+</html>
