@@ -14,8 +14,12 @@
         constructor(){
             this.#height = "178cm";
         }
+        getHeight(){
+            console.log(this.#height);
+        }
     }
     let zhangsan = new Person();
-    console.log(zhangsan.#height);
+    // console.log(zhangsan.#height);
+    zhangsan.getHeight();
 </script>
 </html>
