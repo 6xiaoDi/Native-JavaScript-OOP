@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 原型继承
+    function Dad(name){
+        this.name = name;
+    }
+    // 建议把方法都放到原型中去
+    Dad.prototype.fn = function(){
+        console.log("fn...");
+    }
+
+    function Son(name){
+        Dad.call(this,name);
+        this.height = "178cm";
+    }
+
+    let newSon = new Son("张三");
+    newSon.fn();
+</script>
+</html>
