@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // getter /setter;
+
+    class Person{
+        constructor(){
+            this.name = "张三"; //数据观察/数据劫持；
+            this.height = "199cm";
+        }
+        get height(){
+            console.log("获取了height值"); // 数据劫持
+            return "178cm"
+        }
+        set height(newValue){
+            console.log("设置的新值是"+newValue);
+        }
+    }
+
+    let zhangsan  = new Person();
+    console.log( zhangsan.height);
+    zhangsan.height = "180cm";
+</script>
+</html>
