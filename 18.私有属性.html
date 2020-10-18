@@ -11,15 +11,23 @@
     // 子类不能继承私有属性；
     class Person{
         #height;
+        #fn;
         constructor(){
             this.#height = "178cm";
+            this.#fn = function(){
+                console.log("fn...");
+            }
         }
         getHeight(){
             console.log(this.#height);
         }
+        dispathFn(){
+            this.#fn();
+        }
     }
     let zhangsan = new Person();
     // console.log(zhangsan.#height);
-    zhangsan.getHeight();
+    // zhangsan.getHeight();
+    zhangsan.dispathFn();
 </script>
 </html>
