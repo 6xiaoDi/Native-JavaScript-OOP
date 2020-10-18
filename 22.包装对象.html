@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 包装对象；
+    // 简单类型的变量可以直接调用方法，大家会认为是对象
+    let str = "adasgdg";
+    console.log(str);  // 它里面没有split
+    let arr = str.split("");
+    console.log(arr);
+    // 但是这也追加不上属性
+    str.a = 10;
+    console.log(str.a); // undefined
+    // 为啥呢？在调用split的时候，系统会做一些工作，它会帮你形成一个包装对象。将这里的str进行重新的包装
+
+    let str1 = new String("fdasfd");
+    console.log(str1)  // 能看到它里面有split
+    str1.split("")
+</script>
+</html>
