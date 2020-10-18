@@ -8,9 +8,10 @@
 </body>
 <script>
     function Person(){
-        this.name = "张三";
+        // this.name = "张三";
     }
 
+    Person.prototype.name = "李四";
     let zhangsang = new Person();
     console.log(zhangsang.name);
 </script>
