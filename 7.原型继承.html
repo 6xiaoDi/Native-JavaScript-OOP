@@ -22,8 +22,13 @@
     }
     Son.prototype = Dad.prototype;
     Son.prototype.constructor = Son;
+    Son.prototype.fn = function(){
+        console.log("子构造函数的fn方法...");
+    }
 
     let newSon = new Son("张三");
     newSon.fn();
+    let newDad = new Dad("李四");
+    newDad.fn();
 </script>
 </html>
