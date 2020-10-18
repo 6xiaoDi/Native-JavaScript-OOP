@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let obj = {
+        a:10,
+        b:20
+    }
+    // 方式一：序列化和序列化；深拷贝
+    let obj1 = JSON.parse(JSON.stringify(obj));
+
+    obj1.a = 1000;
+    console.log(obj1);
+    console.log(obj);
+</script>
+</html>
