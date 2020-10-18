@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    function Dad(name){
+        this.name = name;
+        this.cs = function(){console.log(this);};
+    }
+    Dad.prototype.fn = function(){
+        console.log("fn...");
+    }
+
+    function Son(name){
+        Dad.call(this,name);
+        this.height = "178cm";
+        this.cs = function(){console.log(this);};
+    }
+
+    // 新建构造函数
+    let Link = function(){
+        this.cs = function(){console.log(this);};
+    };
+
+    Link.prototype = Dad.prototype;
+    Son.prototype =  new Link();
+    // Son.prototype 固有属性  constructor; 覆盖掉，因此丢失constructor属性，所以需要同步它。
+    Son.prototype.constructor = Son;
+
+    Son.prototype.fn = function(){
+        console.log("子构造函数的fn方法...");
+    }
+
+    let dad = new Dad();
+    let son = new Son();
+    dad.cs();
+    son.cs();
+
+</script>
+</html>
