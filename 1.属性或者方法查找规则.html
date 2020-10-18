@@ -12,7 +12,8 @@
     }
 
     // Person.prototype.name = "李四";
-    Person.prototype.__proto__.name = "王五"
+    // Person.prototype.__proto__.name = "王五"
+    Object.prototype.name = "李力";
     let zhangsang = new Person();
     console.log(zhangsang.name);
 </script>
