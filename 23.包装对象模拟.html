@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let str = "adasgdg";
+
+    //包装对象模拟
+
+    // 字符串、number、bollean；（所有基本类型系统都做包装对象）
+    // 因此需要加某个属性，只能加在包装对象，但是它由系统控制，我们拿不到。
+    function mysplit(str,arg){
+        let temp = new String(str); //临时包装对象
+        let arr =  temp.split(arg);
+        // 销毁包装对象。（省略）
+        return arr;
+    }
+    let arr =  mysplit(str,"");
+    console.log(arr);
+</script>
+</html>
