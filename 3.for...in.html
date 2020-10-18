@@ -16,7 +16,9 @@
 
     // 会循环原型链
     for(let key in obj){
-        console.log(key);
+        if(obj.hasOwnProperty(key)){
+            console.log(key);
+        }
     }
 </script>
 </html>
