@@ -9,14 +9,18 @@
 <script>
     function Dad(name){
         this.name = name;
+        this.fn = function(){
+            console.log("fn...");
+        }
     }
 
     function Son(name){
         Dad.call(this,name);    // 继承Dad的name，改变this指向成对象的指向
         this.height = "178cm";
     }
-
+    // new  --->
     let zhangsan  = new Son("张三");
     console.log(zhangsan.name);
+    zhangsan.fn();
 </script>
 </html>
