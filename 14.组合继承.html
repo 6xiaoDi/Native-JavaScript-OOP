@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    function Dad(name){
+        this.name = name;
+    }
+    Dad.prototype.fn = function(){
+        console.log("fn...");
+    }
+
+    function Son(name){
+        Dad.call(this,name);
+        this.height = "178cm";
+    }
+
+    let Link = function(){}; // 新建构造函数
+    Link.prototype = Dad.prototype;
+    Son.prototype =  new Link();
+    // Son.prototype 固有属性  constructor属性会被覆盖掉，因此丢失constructor属性，所以需要同步它。
+    Son.prototype.constructor = Son;
+
+    Son.prototype.fn = function(){
+        console.log("子构造函数的fn方法...");
+    }
+
+
+    let newSon = new Son("张三");
+    newSon.fn();
+    let newDad = new Dad("李四");
+    newDad.fn();
+</script>
+</html>
