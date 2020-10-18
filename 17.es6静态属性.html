@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    class Person{
+        static num = 0; //静态属性  不需要实例化调用；
+        constructor(name){
+            this.name = name;
+        }
+        fn(){
+            console.log("fn....");
+        }
+    }
+    // Person.color = "黄色"; // es5写法：静态属性
+    console.log(typeof Person); // 发现class只是换了一种形式，它还是靠构造函数实现的
+
+    let zhangsan = new Person("张三");
+    console.log(zhangsan);
+    zhangsan.fn();
+    console.log(Person.num);
+</script>
+</html>
