@@ -18,8 +18,9 @@
 
     class Son extends Dad{
         constructor(name){
+            super(name);
             this.height = "178cm";
-            super(name);  // 预定义函数调用父级（并且一定要写在开头，写在this语句前，否则报错！）
+            // super(name);  // 预定义函数调用父级（并且一定要写在开头，写在this语句前，否则报错！）
         }
         fn(){
             console.log("fn...");
